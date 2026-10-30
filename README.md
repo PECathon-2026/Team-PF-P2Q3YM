@@ -14,9 +14,11 @@ The project works without `make` on Windows. Run these from the repository root:
 | `make demo` | `python -m privacylens` |
 
 Generate the deterministic evaluation fixtures directly with `python -m privacylens.eval.gen_data`.
+Run the seven-criterion evaluation with `python -m privacylens.eval.run_eval --runs 3 --seed 1`; it writes `eval/results.json` and `eval/report.md`.
 Run the leak-fuzz pathway with `python -m privacylens.eval.leak_fuzz --runs 50 --seed 1`.
 Run the browser-backed mock checkout with `python -m privacylens.agent.run --task checkout --provider mock --approve auto`.
 Add `--hijack` to exercise rejected hostile actions, or use `--mode baseline` to capture the unprotected mock page. The protected checkout fills fields only from local vault references, verifies each filled value in the browser, and stops at Pay for approval.
+Launch the local dashboard with `python -m privacylens.ui.server`. It opens a one-time-token URL, then uses a strict same-site HttpOnly cookie; all dashboard APIs are loopback-only and mock-transport-only.
 
 The core detector, sanitizer, vault, and egress checks use the Python standard library. Pillow, pytesseract, and PyYAML are optional for image/OCR and YAML support.
 
@@ -28,4 +30,4 @@ Sanitization minimizes observations by default: it retains interactive controls 
 
 Sensitive values are replaced with per-session shadow tokens. Reuse the same `SessionTokenizer` (or session `Vault`) to keep token indices stable across observations. Vault reads are local policy checks, not cryptography; values require explicit approval by default and are limited by field kind, exact URL origin, visibility, enabled state, and optional use count.
 
-There is no UI server endpoint in this build. If one is added, use `create_secure_app()` and `serve_local()` from `privacylens.ui.security`: the runner binds only to `127.0.0.1`, and app middleware checks the random session token and exact loopback `Origin` for every route, including approval routes.
+The dashboard uses `create_secure_app()` and `serve_local()` from `privacylens.ui.security`. It binds only to `127.0.0.1`, authenticates normal GETs with the bootstrap cookie, and checks cookie, exact loopback `Origin`, and `X-Requested-With` on POSTs, including approvals.

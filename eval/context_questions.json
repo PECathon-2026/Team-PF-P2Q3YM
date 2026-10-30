@@ -1,0 +1,52 @@
+{
+  "checkout": [
+    {"key": "title", "question": "What is the page title?"},
+    {"key": "interactive_count", "question": "How many interactive controls are present?"},
+    {"key": "input_count", "question": "How many input fields are present?"},
+    {"key": "button_count", "question": "How many buttons are present?"},
+    {"key": "input_names", "question": "Which input names are available?"},
+    {"key": "control_ids", "question": "Which controls can be targeted?"},
+    {"key": "button_labels", "question": "What actions can the buttons perform?"},
+    {"key": "first_input_type", "question": "What is the first input's type?"}
+  ],
+  "login": [
+    {"key": "title", "question": "What is the page title?"},
+    {"key": "interactive_count", "question": "How many interactive controls are present?"},
+    {"key": "input_count", "question": "How many input fields are present?"},
+    {"key": "button_count", "question": "How many buttons are present?"},
+    {"key": "input_names", "question": "Which input names are available?"},
+    {"key": "control_ids", "question": "Which controls can be targeted?"},
+    {"key": "button_labels", "question": "What actions can the buttons perform?"},
+    {"key": "first_input_type", "question": "What is the first input's type?"}
+  ],
+  "support": [
+    {"key": "title", "question": "What is the page title?"},
+    {"key": "interactive_count", "question": "How many interactive controls are present?"},
+    {"key": "input_count", "question": "How many input fields are present?"},
+    {"key": "button_count", "question": "How many buttons are present?"},
+    {"key": "input_names", "question": "Which input names are available?"},
+    {"key": "control_ids", "question": "Which controls can be targeted?"},
+    {"key": "button_labels", "question": "What actions can the buttons perform?"},
+    {"key": "first_input_type", "question": "What is the first input's type?"}
+  ],
+  "meet": [
+    {"key": "title", "question": "What is the page title?"},
+    {"key": "interactive_count", "question": "How many interactive controls are present?"},
+    {"key": "input_count", "question": "How many input fields are present?"},
+    {"key": "button_count", "question": "How many buttons are present?"},
+    {"key": "input_names", "question": "Which input names are available?"},
+    {"key": "control_ids", "question": "Which controls can be targeted?"},
+    {"key": "button_labels", "question": "What actions can the buttons perform?"},
+    {"key": "first_input_type", "question": "What is the first input's type?"}
+  ],
+  "devsettings": [
+    {"key": "title", "question": "What is the page title?"},
+    {"key": "interactive_count", "question": "How many interactive controls are present?"},
+    {"key": "input_count", "question": "How many input fields are present?"},
+    {"key": "button_count", "question": "How many buttons are present?"},
+    {"key": "input_names", "question": "Which input names are available?"},
+    {"key": "control_ids", "question": "Which controls can be targeted?"},
+    {"key": "button_labels", "question": "What actions can the buttons perform?"},
+    {"key": "first_input_type", "question": "What is the first input's type?"}
+  ]
+}
