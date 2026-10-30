@@ -39,6 +39,7 @@ def run(task, start_url, config):
     timings = {key: 0.0 for key in ("snapshot", "detect", "sanitize", "gate", "llm", "execute")}
     history, actions, rejections, approvals, blocks = [], [], [], [], []
     success = False; malformed_retry = False; previous = None; repeats = 0; hidden_total = 0
+    stop_reason = "not_set"
     captured = []; captured_leak = False
     bus=config.get("event_bus")
     max_steps = min(15, int(config.get("max_steps", 15)))
@@ -136,6 +137,7 @@ def run(task, start_url, config):
             if task == "checkout" and action.kind == "click" and "pay" in desc.casefold():
                 success = bool(config.get("filled_ids", set()) >= set(refs))
                 history.append({"step":step,"action":"click","target":action.target,"result":"approval_requested_stop"})
+                stop_reason = "approval_at_pay"
                 actions.append(Action(action.kind,action.target,None,action.irreversible,{"approval_requested":True})); break
         start = time.perf_counter()
         try:
@@ -167,7 +169,7 @@ def run(task, start_url, config):
     leak_status = "present" if captured_leak else "none"
     summary = (f"steps={len(history)} rejections={len(rejections)} rejection_reasons={rejection_reasons} "
                f"approvals={len(approvals)} gate_blocks={len(blocks)} success={str(success).lower()} "
-               f"local_verification={local_verification} seeded_leak={str(captured_leak).lower()} "
+               f"local_verification={local_verification} stop_reason={stop_reason} seeded_leak={str(captured_leak).lower()} "
                f"seeded_value_or_canary_in_captured_bytes={leak_status}")
     return RunReport(actions=tuple(actions),findings=(),status="success" if success else "stopped",summary=summary,
                      metadata={"steps":len(history),"timings":timings,"blocked_events":tuple(blocks),"rejections":tuple(rejections),

@@ -45,6 +45,7 @@ class AgentLoopTests(unittest.TestCase):
         report=run("checkout",url,{"browser":browser,"vault":Vault(),"llm":MockLLM(),"approval":AutoApprove(),"rules":Rules(allowed_origins=(origin,)),"max_steps":15})
         self.assertTrue(report.metadata["success"],report.summary)
         self.assertIn("local_verification=passed",report.summary)
+        self.assertIn("stop_reason=approval_at_pay",report.summary)
         self.assertIn("seeded_value_or_canary_in_captured_bytes=none",report.summary)
         self.assertIn("approval_requested",report.metadata["approvals"])
         self.assertFalse(report.metadata["seeded_value_or_canary_in_captured_bytes"])
