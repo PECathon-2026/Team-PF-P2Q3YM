@@ -1,0 +1,424 @@
+{
+  "pages": {
+    "checkout.html": {
+      "sensitive": [
+        {
+          "id": "checkout-card-number",
+          "type": "CARD",
+          "value": "4111111111110006",
+          "selector": "#checkout-card-number",
+          "page": "checkout.html"
+        },
+        {
+          "id": "checkout-cvv",
+          "type": "CVV",
+          "value": "321",
+          "selector": "#checkout-cvv",
+          "page": "checkout.html"
+        },
+        {
+          "id": "checkout-expiry",
+          "type": "EXPIRY",
+          "value": "08/29",
+          "selector": "#checkout-expiry",
+          "page": "checkout.html"
+        },
+        {
+          "id": "checkout-shipping-address",
+          "type": "ADDRESS",
+          "value": "42 Example Road, Pune",
+          "selector": "#checkout-shipping-address",
+          "page": "checkout.html"
+        },
+        {
+          "id": "checkout-customer-name",
+          "type": "NAME",
+          "value": "Maya Iyer",
+          "selector": "#checkout-customer-name",
+          "page": "checkout.html"
+        },
+        {
+          "id": "checkout-customer-phone",
+          "type": "PHONE",
+          "value": "+91 9876543210",
+          "selector": "#checkout-customer-phone",
+          "page": "checkout.html"
+        }
+      ],
+      "non_sensitive": [
+        {
+          "id": "checkout-decoy-0",
+          "type": "ORDER_ID",
+          "value": "ORD-CHECKOUT-20261030-1042",
+          "selector": "#checkout-decoy-0",
+          "page": "checkout.html"
+        },
+        {
+          "id": "checkout-decoy-1",
+          "type": "TIMESTAMP",
+          "value": "2026-10-30 14:05:09",
+          "selector": "#checkout-decoy-1",
+          "page": "checkout.html"
+        },
+        {
+          "id": "checkout-decoy-2",
+          "type": "SKU",
+          "value": "SKU-AB12-CD34",
+          "selector": "#checkout-decoy-2",
+          "page": "checkout.html"
+        },
+        {
+          "id": "checkout-decoy-3",
+          "type": "VERSION",
+          "value": "Version 1.2.3.4",
+          "selector": "#checkout-decoy-3",
+          "page": "checkout.html"
+        },
+        {
+          "id": "checkout-decoy-4",
+          "type": "PRICE",
+          "value": "$19.99",
+          "selector": "#checkout-decoy-4",
+          "page": "checkout.html"
+        },
+        {
+          "id": "checkout-decoy-5",
+          "type": "INVALID_CARD",
+          "value": "4111111111110007",
+          "selector": "#checkout-decoy-5",
+          "page": "checkout.html"
+        }
+      ]
+    },
+    "login.html": {
+      "sensitive": [
+        {
+          "id": "login-email",
+          "type": "EMAIL",
+          "value": "user.canary@example.test",
+          "selector": "#login-email",
+          "page": "login.html"
+        },
+        {
+          "id": "login-password",
+          "type": "PASSWORD",
+          "value": "S3cure-Demo-Password-Only",
+          "selector": "#login-password",
+          "page": "login.html"
+        },
+        {
+          "id": "login-otp",
+          "type": "OTP",
+          "value": "482731",
+          "selector": "#login-otp",
+          "page": "login.html"
+        },
+        {
+          "id": "login-recovery-phone",
+          "type": "PHONE",
+          "value": "+91 9123456780",
+          "selector": "#login-recovery-phone",
+          "page": "login.html"
+        }
+      ],
+      "non_sensitive": [
+        {
+          "id": "login-decoy-0",
+          "type": "ORDER_ID",
+          "value": "ORD-LOGIN-20261030-1042",
+          "selector": "#login-decoy-0",
+          "page": "login.html"
+        },
+        {
+          "id": "login-decoy-1",
+          "type": "TIMESTAMP",
+          "value": "2026-10-30 14:05:09",
+          "selector": "#login-decoy-1",
+          "page": "login.html"
+        },
+        {
+          "id": "login-decoy-2",
+          "type": "SKU",
+          "value": "SKU-AB12-CD34",
+          "selector": "#login-decoy-2",
+          "page": "login.html"
+        },
+        {
+          "id": "login-decoy-3",
+          "type": "VERSION",
+          "value": "Version 1.2.3.4",
+          "selector": "#login-decoy-3",
+          "page": "login.html"
+        },
+        {
+          "id": "login-decoy-4",
+          "type": "PRICE",
+          "value": "$19.99",
+          "selector": "#login-decoy-4",
+          "page": "login.html"
+        },
+        {
+          "id": "login-decoy-5",
+          "type": "INVALID_CARD",
+          "value": "4111111111110007",
+          "selector": "#login-decoy-5",
+          "page": "login.html"
+        }
+      ]
+    },
+    "support.html": {
+      "sensitive": [
+        {
+          "id": "support-customer-phone-1",
+          "type": "PHONE",
+          "value": "+91 9823456701",
+          "selector": "#support-customer-phone-1",
+          "page": "support.html"
+        },
+        {
+          "id": "support-customer-phone-2",
+          "type": "PHONE",
+          "value": "+91 9765432108",
+          "selector": "#support-customer-phone-2",
+          "page": "support.html"
+        },
+        {
+          "id": "support-private-message",
+          "type": "NAME",
+          "value": "Nisha Rao",
+          "selector": "#support-private-message",
+          "page": "support.html"
+        },
+        {
+          "id": "support-private-aadhaar",
+          "type": "AADHAAR",
+          "value": "234567890124",
+          "selector": "#support-private-message",
+          "page": "support.html"
+        }
+      ],
+      "non_sensitive": [
+        {
+          "id": "support-decoy-0",
+          "type": "ORDER_ID",
+          "value": "ORD-SUPPORT-20261030-1042",
+          "selector": "#support-decoy-0",
+          "page": "support.html"
+        },
+        {
+          "id": "support-decoy-1",
+          "type": "TIMESTAMP",
+          "value": "2026-10-30 14:05:09",
+          "selector": "#support-decoy-1",
+          "page": "support.html"
+        },
+        {
+          "id": "support-decoy-2",
+          "type": "SKU",
+          "value": "SKU-AB12-CD34",
+          "selector": "#support-decoy-2",
+          "page": "support.html"
+        },
+        {
+          "id": "support-decoy-3",
+          "type": "VERSION",
+          "value": "Version 1.2.3.4",
+          "selector": "#support-decoy-3",
+          "page": "support.html"
+        },
+        {
+          "id": "support-decoy-4",
+          "type": "PRICE",
+          "value": "$19.99",
+          "selector": "#support-decoy-4",
+          "page": "support.html"
+        },
+        {
+          "id": "support-decoy-5",
+          "type": "INVALID_CARD",
+          "value": "4111111111110007",
+          "selector": "#support-decoy-5",
+          "page": "support.html"
+        }
+      ]
+    },
+    "meet.html": {
+      "sensitive": [
+        {
+          "id": "meet-participant-1-name",
+          "type": "NAME",
+          "value": "Aarav Shah",
+          "selector": "#meet-participant-1-name",
+          "page": "meet.html"
+        },
+        {
+          "id": "meet-participant-1-email",
+          "type": "EMAIL",
+          "value": "aarav.canary@example.test",
+          "selector": "#meet-participant-1-email",
+          "page": "meet.html"
+        },
+        {
+          "id": "meet-participant-2-name",
+          "type": "NAME",
+          "value": "Leena Das",
+          "selector": "#meet-participant-2-name",
+          "page": "meet.html"
+        },
+        {
+          "id": "meet-participant-2-email",
+          "type": "EMAIL",
+          "value": "leena.canary@example.test",
+          "selector": "#meet-participant-2-email",
+          "page": "meet.html"
+        }
+      ],
+      "non_sensitive": [
+        {
+          "id": "meet-decoy-0",
+          "type": "ORDER_ID",
+          "value": "ORD-MEET-20261030-1042",
+          "selector": "#meet-decoy-0",
+          "page": "meet.html"
+        },
+        {
+          "id": "meet-decoy-1",
+          "type": "TIMESTAMP",
+          "value": "2026-10-30 14:05:09",
+          "selector": "#meet-decoy-1",
+          "page": "meet.html"
+        },
+        {
+          "id": "meet-decoy-2",
+          "type": "SKU",
+          "value": "SKU-AB12-CD34",
+          "selector": "#meet-decoy-2",
+          "page": "meet.html"
+        },
+        {
+          "id": "meet-decoy-3",
+          "type": "VERSION",
+          "value": "Version 1.2.3.4",
+          "selector": "#meet-decoy-3",
+          "page": "meet.html"
+        },
+        {
+          "id": "meet-decoy-4",
+          "type": "PRICE",
+          "value": "$19.99",
+          "selector": "#meet-decoy-4",
+          "page": "meet.html"
+        },
+        {
+          "id": "meet-decoy-5",
+          "type": "INVALID_CARD",
+          "value": "4111111111110007",
+          "selector": "#meet-decoy-5",
+          "page": "meet.html"
+        }
+      ]
+    },
+    "devsettings.html": {
+      "sensitive": [
+        {
+          "id": "dev-akia-key",
+          "type": "SECRET",
+          "value": "AKIAIOSFODNN7EXAMPLE",
+          "selector": "#dev-akia-key",
+          "page": "devsettings.html"
+        },
+        {
+          "id": "dev-ghp-key",
+          "type": "SECRET",
+          "value": "ghp_abcdefghijklmnopqrstuvwxyz123456",
+          "selector": "#dev-ghp-key",
+          "page": "devsettings.html"
+        },
+        {
+          "id": "dev-sk-key",
+          "type": "SECRET",
+          "value": "sk-test-abcdefghijklmnopqrstuvwxyz123456",
+          "selector": "#dev-sk-key",
+          "page": "devsettings.html"
+        },
+        {
+          "id": "dev-jwt",
+          "type": "SECRET",
+          "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzeW50aGV0aWMifQ.dGVzdHNpZ25hdHVyZQ",
+          "selector": "#dev-jwt",
+          "page": "devsettings.html"
+        },
+        {
+          "id": "dev-webhook-secret",
+          "type": "SECRET",
+          "value": "whsec_T8rQ9mP3xV6kL2nB5cD1fH7jK4wZ9sA",
+          "selector": "#dev-webhook-secret",
+          "page": "devsettings.html"
+        },
+        {
+          "id": "dev-ipv4",
+          "type": "IP",
+          "value": "198.51.100.24",
+          "selector": "#dev-ipv4",
+          "page": "devsettings.html"
+        },
+        {
+          "id": "dev-ipv6",
+          "type": "IP",
+          "value": "2001:db8::42",
+          "selector": "#dev-ipv6",
+          "page": "devsettings.html"
+        }
+      ],
+      "non_sensitive": [
+        {
+          "id": "devsettings-decoy-0",
+          "type": "ORDER_ID",
+          "value": "ORD-DEVSETTINGS-20261030-1042",
+          "selector": "#devsettings-decoy-0",
+          "page": "devsettings.html"
+        },
+        {
+          "id": "devsettings-decoy-1",
+          "type": "TIMESTAMP",
+          "value": "2026-10-30 14:05:09",
+          "selector": "#devsettings-decoy-1",
+          "page": "devsettings.html"
+        },
+        {
+          "id": "devsettings-decoy-2",
+          "type": "SKU",
+          "value": "SKU-AB12-CD34",
+          "selector": "#devsettings-decoy-2",
+          "page": "devsettings.html"
+        },
+        {
+          "id": "devsettings-decoy-3",
+          "type": "VERSION",
+          "value": "Version 1.2.3.4",
+          "selector": "#devsettings-decoy-3",
+          "page": "devsettings.html"
+        },
+        {
+          "id": "devsettings-decoy-4",
+          "type": "PRICE",
+          "value": "$19.99",
+          "selector": "#devsettings-decoy-4",
+          "page": "devsettings.html"
+        },
+        {
+          "id": "devsettings-decoy-5",
+          "type": "INVALID_CARD",
+          "value": "4111111111110007",
+          "selector": "#devsettings-decoy-5",
+          "page": "devsettings.html"
+        }
+      ]
+    }
+  },
+  "notes": {
+    "meet.html": [
+      "FACE is not yet seeded; the page contains a labeled image placeholder only."
+    ]
+  }
+}

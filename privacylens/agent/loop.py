@@ -52,8 +52,11 @@ def run(task, start_url, config):
         observation = sanitize(snapshot, None, rules, task_keywords=(task,), full_page=False)
         timings["sanitize"] += time.perf_counter()-start
         if bus:
-            bus.shots["before"] = observation.snapshot.screenshot
-            bus.shots["after"] = observation.snapshot.screenshot
+            bus.shots["before"] = snapshot.screenshot
+            safe_image = observation.snapshot.screenshot
+            if safe_image is None and config.get("safe_preview_renderer"):
+                safe_image = config["safe_preview_renderer"](observation.snapshot)
+            bus.shots["after"] = safe_image
             bus.emit("findings",items=[dict(item) for item in observation.findings])
         safe_elements = []
         for el in observation.snapshot.elements:

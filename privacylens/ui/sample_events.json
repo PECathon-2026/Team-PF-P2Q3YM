@@ -1,0 +1,1 @@
+[{"type":"action","data":{"action":"Snapshot sanitized","target":"local demo"}},{"type":"validator","data":{"verdict":"ALLOWED","action":"privacy scan"}},{"type":"gate","data":{"verdict":"ALLOWED"}},{"type":"run_end","data":{"status":"finished","summary":"Demo replay completed safely."}}]

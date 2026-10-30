@@ -1,0 +1,23 @@
+# PrivacyLens default policy
+rules:
+  # Detection and handling defaults
+  detect_sensitive_data: true
+  sanitize_sensitive_data: true
+  require_confirmation_for_irreversible_actions: true
+  redact_screenshots: true
+  redact_dom_observations: true
+
+allowed_origins:
+  - http://localhost
+  - http://127.0.0.1
+  - file://
+
+entropy_threshold: 4.2
+
+irreversible_keywords:
+  - pay
+  - submit
+  - delete
+  - send
+  - rotate
+  - confirm

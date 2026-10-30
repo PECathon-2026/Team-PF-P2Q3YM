@@ -1,0 +1,8 @@
+{
+  "allowed_origins": ["http://localhost", "http://127.0.0.1", "file://"],
+  "block_types": ["AADHAAR", "PAN", "CARD", "PHONE", "EMAIL", "OTP", "SECRET", "PASSWORD", "IP", "CVV", "EXPIRY", "ADDRESS", "NAME", "OTHER"],
+  "keep_context": {},
+  "max_findings_logged": 100,
+  "minimize": true,
+  "task_keywords": []
+}
